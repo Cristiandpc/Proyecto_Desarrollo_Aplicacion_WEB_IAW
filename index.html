@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Liga del Aficionado | Camisetas oficiales de La Liga</title>
+    <meta name="description" content="Tienda online de camisetas de fútbol de los equipos de La Liga española.">
+    <meta name="author" content="Cristian de Paz">
+    <meta name="keywords" content="ASIR, fútbol, camisetas, La Liga, tienda online, Real Madrid, FC Barcelona, Atlético de Madrid, Sevilla, Real Betis, Villarreal, equipaciones, fútbol español, HTML, CSS, JavaScript">
+
+    <!-- Hojas de estilo: la común y la específica de la portada -->
+    <link rel="stylesheet" href="css/comunes.css">
+    <link rel="stylesheet" href="css/portada.css">
+</head>
+<body>
+
+    <!-- ========== CABECERA Y NAVEGACIÓN ========== -->
+    <header class="cabecera-principal">
+        <div class="contenedor-cabecera">
+            <a href="index.html">
+                <img src="assets/logo.svg" alt="Logo de La Liga del Aficionado" class="logo-tienda">
+            </a>
+            <nav>
+                <ul class="menu-navegacion">
+                    <li><a href="index.html" class="activo">Inicio</a></li>
+                    <li><a href="producto.html">Producto</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== CONTENIDO PRINCIPAL ========== -->
+    <main class="contenido-principal">
+
+        <!-- Sección Hero: bienvenida e imagen de fondo -->
+        <section class="seccion-hero">
+            <div class="contenido-hero">
+                <p class="saludo-dinamico" id="saludo-dinamico">¡Bienvenido!</p>
+                <h1 class="titulo-hero">Vive La Liga con tu camiseta favorita</h1>
+                <p class="texto-hero">
+                    En <strong>La Liga del Aficionado</strong> encontrarás las camisetas oficiales
+                    de los mejores equipos de La Liga española. Calidad garantizada, envío en 24 horas
+                    y los precios más competitivos del mercado.
+                </p>
+                <a href="producto.html" class="boton">Ver producto destacado</a>
+            </div>
+        </section>
+
+        <!-- Sección de equipos destacados -->
+        <section class="seccion-equipos">
+            <h2 class="titulo-seccion">Nuestros equipos</h2>
+            <p class="subtitulo-seccion">Todas las camisetas oficiales de La Liga 2024/2025</p>
+
+            <div class="rejilla-equipos">
+
+                <article class="tarjeta-equipo">
+                    <img src="assets/camiseta-real-madrid.webp" alt="Camiseta del Real Madrid" class="imagen-camiseta">
+                    <h3>Real Madrid</h3>
+                    <p class="precio-tarjeta">89,99 €</p>
+                </article>
+
+                <article class="tarjeta-equipo">
+                    <img src="assets/camiseta-barcelona.webp" alt="Camiseta del FC Barcelona" class="imagen-camiseta">
+                    <h3>FC Barcelona</h3>
+                    <p class="precio-tarjeta">89,99 €</p>
+                </article>
+
+                <article class="tarjeta-equipo">
+                    <img src="assets/camiseta-atletico.jpg" alt="Camiseta del Atlético de Madrid" class="imagen-camiseta">
+                    <h3>Atlético de Madrid</h3>
+                    <p class="precio-tarjeta">84,99 €</p>
+                </article>
+
+                <article class="tarjeta-equipo">
+                    <img src="assets/camiseta-sevilla.png" alt="Camiseta del Sevilla FC" class="imagen-camiseta">
+                    <h3>Sevilla FC</h3>
+                    <p class="precio-tarjeta">79,99 €</p>
+                </article>
+
+                <article class="tarjeta-equipo">
+                    <img src="assets/camiseta-betis.webp" alt="Camiseta del Real Betis" class="imagen-camiseta">
+                    <h3>Real Betis</h3>
+                    <p class="precio-tarjeta">79,99 €</p>
+                </article>
+
+                <article class="tarjeta-equipo">
+                    <img src="assets/camiseta-villarreal.webp" alt="Camiseta del Villarreal CF" class="imagen-camiseta">
+                    <h3>Villarreal CF</h3>
+                    <p class="precio-tarjeta">74,99 €</p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Sección de ventajas -->
+        <section class="seccion-ventajas">
+            <h2 class="titulo-seccion">¿Por qué comprar con nosotros?</h2>
+            <div class="rejilla-ventajas">
+                <div class="tarjeta-ventaja">
+                    <div class="icono-ventaja">[ENVIO]</div>
+                    <h3>Envío en 24 horas</h3>
+                    <p>Recibe tu camiseta al día siguiente en cualquier punto de la península.</p>
+                </div>
+                <div class="tarjeta-ventaja">
+                    <div class="icono-ventaja">[OFICIAL]</div>
+                    <h3>Producto 100% oficial</h3>
+                    <p>Todas nuestras camisetas son originales y vienen con etiqueta del fabricante.</p>
+                </div>
+                <div class="tarjeta-ventaja">
+                    <div class="icono-ventaja">[DEVOL]</div>
+                    <h3>Devolución gratuita</h3>
+                    <p>Si no te convence, te devolvemos el dinero sin preguntas en 30 días.</p>
+                </div>
+                <div class="tarjeta-ventaja">
+                    <div class="icono-ventaja">[ATEN]</div>
+                    <h3>Atención personalizada</h3>
+                    <p>Resolvemos tus dudas de lunes a sábado por correo o teléfono.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de contadores -->
+        <section class="seccion-contadores">
+            <div class="contador">
+                <span class="numero-contador" id="contador-clientes" data-objetivo="10500">0</span>
+                <p>Clientes satisfechos</p>
+            </div>
+            <div class="contador">
+                <span class="numero-contador" id="contador-camisetas" data-objetivo="20000">0</span>
+                <p>Camisetas vendidas</p>
+            </div>
+            <div class="contador">
+                <span class="numero-contador" id="contador-equipos" data-objetivo="20">0</span>
+                <p>Equipos disponibles</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== PIE DE PÁGINA ========== -->
+    <footer class="pie-pagina">
+        <div class="contenedor-pie">
+            <ul class="redes-sociales">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">YouTube</a></li>
+            </ul>
+            <p class="derechos-reservados">
+                &copy; 2025 La Liga del Aficionado — Todos los derechos reservados.<br>
+                Página desarrollada por <strong>Cristian de Paz</strong>.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Script específico de la portada -->
+    <script src="js/portada.js"></script>
+</body>
+</html>

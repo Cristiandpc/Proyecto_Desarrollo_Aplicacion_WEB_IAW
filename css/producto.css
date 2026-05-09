@@ -1,0 +1,318 @@
+/* =========================================================
+   ESTILOS DE LA PÁGINA DE PRODUCTO (producto.html)
+   ========================================================= */
+
+/* --- Migas de pan --- */
+.migas-pan {
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    color: var(--color-gris);
+}
+
+.migas-pan a {
+    color: var(--color-principal);
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transicion);
+}
+
+.migas-pan a:hover {
+    color: var(--color-acento);
+}
+
+.separador-migas {
+    margin: 0 0.5rem;
+    color: var(--color-borde);
+}
+
+/* --- Layout principal: dos columnas --- */
+.detalle-producto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--sombra-suave);
+    margin-bottom: 3rem;
+}
+
+/* --- Galería de imágenes --- */
+.galeria-producto {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.imagen-principal-wrapper {
+    background-color: var(--color-claro);
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.imagen-principal-producto {
+    width: 100%;
+    max-width: 450px;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+}
+
+.imagen-principal-producto:hover {
+    transform: scale(1.05);
+}
+
+.miniaturas-galeria {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.miniatura-galeria {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    background-color: var(--color-claro);
+    padding: 5px;
+    border-radius: 6px;
+    border: 2px solid var(--color-borde);
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.miniatura-galeria:hover {
+    border-color: var(--color-acento);
+    transform: translateY(-3px);
+}
+
+.miniatura-galeria.activa {
+    border-color: var(--color-acento);
+    box-shadow: 0 0 0 2px rgba(200, 16, 46, 0.2);
+}
+
+/* --- Información del producto --- */
+.informacion-producto {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.categoria-producto {
+    color: var(--color-acento);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.nombre-producto {
+    font-size: 2.2rem;
+    color: var(--color-principal);
+    line-height: 1.2;
+}
+
+.valoracion-producto {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.estrellas {
+    color: #FFC107;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.numero-resenas {
+    color: var(--color-gris);
+    font-size: 0.9rem;
+}
+
+/* --- Precio --- */
+.precio-producto {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0.5rem 0;
+}
+
+.precio-actual {
+    font-size: 2.4rem;
+    color: var(--color-acento);
+    font-weight: bold;
+}
+
+.precio-anterior {
+    font-size: 1.2rem;
+    color: var(--color-gris);
+    text-decoration: line-through;
+}
+
+.etiqueta-rebaja {
+    background-color: var(--color-secundario);
+    color: white;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.descripcion-producto {
+    color: var(--color-oscuro);
+    line-height: 1.7;
+    padding: 1rem 0;
+    border-top: 1px solid var(--color-borde);
+    border-bottom: 1px solid var(--color-borde);
+}
+
+/* --- Selectores (talla y cantidad) --- */
+.etiqueta-selector {
+    font-weight: bold;
+    color: var(--color-principal);
+    margin-bottom: 0.5rem;
+}
+
+.lista-tallas {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.boton-talla {
+    background-color: white;
+    border: 2px solid var(--color-borde);
+    color: var(--color-oscuro);
+    padding: 0.6rem 1rem;
+    min-width: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.boton-talla:hover {
+    border-color: var(--color-principal);
+    background-color: var(--color-claro);
+}
+
+.boton-talla.seleccionada {
+    background-color: var(--color-principal);
+    color: white;
+    border-color: var(--color-principal);
+}
+
+/* --- Selector de cantidad --- */
+.control-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    width: fit-content;
+    border: 2px solid var(--color-borde);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.boton-cantidad {
+    background-color: var(--color-claro);
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--color-principal);
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.boton-cantidad:hover {
+    background-color: var(--color-principal);
+    color: white;
+}
+
+#entrada-cantidad {
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: white;
+}
+
+#entrada-cantidad:focus {
+    outline: none;
+}
+
+/* --- Mensaje de aviso al usuario --- */
+.mensaje-aviso {
+    min-height: 1.4rem;
+    font-weight: bold;
+    transition: var(--transicion);
+}
+
+.mensaje-aviso.mensaje-error {
+    color: var(--color-acento);
+}
+
+.mensaje-aviso.mensaje-exito {
+    color: var(--color-secundario);
+}
+
+/* --- Botones de acción --- */
+.botones-accion {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+/* --- Lista de características --- */
+.lista-caracteristicas {
+    list-style: none;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-borde);
+}
+
+.lista-caracteristicas li {
+    padding: 0.4rem 0;
+    color: var(--color-gris);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.lista-caracteristicas li::before {
+    content: "✓";
+    color: var(--color-secundario);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* --- Adaptación móvil --- */
+@media (max-width: 800px) {
+    .detalle-producto {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+
+    .nombre-producto {
+        font-size: 1.6rem;
+    }
+
+    .precio-actual {
+        font-size: 1.8rem;
+    }
+
+    .imagen-principal-wrapper {
+        min-height: 300px;
+        padding: 1rem;
+    }
+}

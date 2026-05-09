@@ -1,0 +1,197 @@
+/* =========================================================
+   ESTILOS COMUNES — La Liga del Aficionado
+   Hoja de estilos compartida por las tres páginas:
+   contiene la paleta de colores, tipografía, cabecera,
+   barra de navegación y pie de página.
+   ========================================================= */
+
+/* --- Reinicio básico de márgenes y bordes --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Variables globales (paleta de la tienda) --- */
+:root {
+    --color-principal: #0E1E40;   /* Azul marino tipo escudo */
+    --color-acento: #C8102E;      /* Rojo La Liga */
+    --color-secundario: #2E8B57;  /* Verde césped */
+    --color-claro: #F8F8F2;       /* Blanco hueso (fondo) */
+    --color-oscuro: #1A1A1A;      /* Casi negro (textos) */
+    --color-gris: #6C6C6C;        /* Gris para textos secundarios */
+    --color-borde: #DDD;
+    --sombra-suave: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --sombra-fuerte: 0 6px 18px rgba(0, 0, 0, 0.15);
+    --transicion: 0.25s ease-in-out;
+}
+
+/* --- Cuerpo de la página --- */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-claro);
+    color: var(--color-oscuro);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Cabecera --- */
+.cabecera-principal {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: var(--sombra-suave);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.contenedor-cabecera {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo-tienda {
+    height: 55px;
+    width: auto;
+    background-color: white;
+    border-radius: 6px;
+    padding: 4px 8px;
+}
+
+/* --- Barra de navegación --- */
+.menu-navegacion {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.menu-navegacion a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: var(--transicion);
+}
+
+.menu-navegacion a:hover {
+    background-color: var(--color-acento);
+    color: white;
+}
+
+.menu-navegacion a.activo {
+    background-color: var(--color-acento);
+}
+
+/* --- Contenedor principal (main) --- */
+.contenido-principal {
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* --- Botones genéricos --- */
+.boton {
+    display: inline-block;
+    background-color: var(--color-acento);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: var(--transicion);
+}
+
+.boton:hover {
+    background-color: #9B0C24;
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-fuerte);
+}
+
+.boton-secundario {
+    background-color: var(--color-principal);
+}
+
+.boton-secundario:hover {
+    background-color: #061027;
+}
+
+/* --- Pie de página --- */
+.pie-pagina {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 2rem 1rem;
+    margin-top: auto;
+    text-align: center;
+}
+
+.contenedor-pie {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.redes-sociales a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transicion);
+}
+
+.redes-sociales a:hover {
+    color: var(--color-acento);
+}
+
+.derechos-reservados {
+    font-size: 0.9rem;
+    color: #BBB;
+    border-top: 1px solid #444;
+    padding-top: 1rem;
+    width: 100%;
+}
+
+/* --- Adaptación para pantallas pequeñas --- */
+@media (max-width: 700px) {
+    .contenedor-cabecera {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-navegacion {
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu-navegacion a {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.7rem;
+    }
+}

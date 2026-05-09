@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | La Liga del Aficionado</title>
+    <meta name="description" content="Ponte en contacto con La Liga del Aficionado. Atendemos tus dudas en menos de 24 horas.">
+    <meta name="author" content="Cristian de Paz">
+    <meta name="keywords" content="ASIR, fútbol, camisetas, La Liga, contacto, atención al cliente, formulario, dudas, soporte, tienda online, HTML, CSS, JavaScript">
+
+    <!-- Hojas de estilo: la común y la específica del contacto -->
+    <link rel="stylesheet" href="css/comunes.css">
+    <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body>
+
+    <!-- ========== CABECERA Y NAVEGACIÓN ========== -->
+    <header class="cabecera-principal">
+        <div class="contenedor-cabecera">
+            <a href="index.html">
+                <img src="assets/logo.svg" alt="Logo de La Liga del Aficionado" class="logo-tienda">
+            </a>
+            <nav>
+                <ul class="menu-navegacion">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="producto.html">Producto</a></li>
+                    <li><a href="contacto.html" class="activo">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== CONTENIDO PRINCIPAL ========== -->
+    <main class="contenido-principal">
+
+        <section class="seccion-contacto">
+
+            <!-- Información de contacto -->
+            <div class="informacion-contacto">
+                <h1 class="titulo-contacto">Hablemos de fútbol</h1>
+                <p class="texto-contacto">
+                    ¿Tienes alguna duda sobre nuestras camisetas? ¿Necesitas ayuda con tu pedido?
+                    Rellena el formulario o utiliza cualquiera de los siguientes canales y te
+                    responderemos lo antes posible.
+                </p>
+
+                <ul class="lista-datos-contacto">
+                    <li>
+                        <span class="etiqueta-dato">Dirección:</span>
+                        <span>Calle del Aficionado, 10 — 28001 Madrid</span>
+                    </li>
+                    <li>
+                        <span class="etiqueta-dato">Teléfono:</span>
+                        <span>+34 912 345 678</span>
+                    </li>
+                    <li>
+                        <span class="etiqueta-dato">Correo:</span>
+                        <span>contacto@laligadelaficionado.es</span>
+                    </li>
+                    <li>
+                        <span class="etiqueta-dato">Horario:</span>
+                        <span>Lunes a sábado, 9:00 — 20:00</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Formulario de contacto -->
+            <form class="formulario-contacto"
+                  id="formulario-contacto"
+                  novalidate>
+                <h2 class="titulo-formulario">Escríbenos</h2>
+
+                <!-- Nombre -->
+                <div class="grupo-campo">
+                    <label for="campo-nombre">Nombre completo *</label>
+                    <input type="text"
+                           id="campo-nombre"
+                           name="nombre"
+                           placeholder="Ej. María García López">
+                    <span class="error-campo" id="error-nombre"></span>
+                </div>
+
+                <!-- Correo electrónico -->
+                <div class="grupo-campo">
+                    <label for="campo-email">Correo electrónico *</label>
+                    <input type="email"
+                           id="campo-email"
+                           name="email"
+                           placeholder="ejemplo@correo.com">
+                    <span class="error-campo" id="error-email"></span>
+                </div>
+
+                <!-- Teléfono (opcional) -->
+                <div class="grupo-campo">
+                    <label for="campo-telefono">Teléfono (opcional)</label>
+                    <input type="tel"
+                           id="campo-telefono"
+                           name="telefono"
+                           placeholder="+34 600 000 000">
+                    <span class="error-campo" id="error-telefono"></span>
+                </div>
+
+                <!-- Asunto -->
+                <div class="grupo-campo">
+                    <label for="campo-asunto">Asunto *</label>
+                    <select id="campo-asunto" name="asunto">
+                        <option value="">-- Selecciona un motivo --</option>
+                        <option value="pedido">Consulta sobre un pedido</option>
+                        <option value="producto">Información de un producto</option>
+                        <option value="devolucion">Devolución o cambio</option>
+                        <option value="sugerencia">Sugerencia o queja</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <span class="error-campo" id="error-asunto"></span>
+                </div>
+
+                <!-- Mensaje -->
+                <div class="grupo-campo">
+                    <label for="campo-mensaje">Mensaje *</label>
+                    <textarea id="campo-mensaje"
+                              name="mensaje"
+                              rows="5"
+                              placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
+                    <span class="error-campo" id="error-mensaje"></span>
+                </div>
+
+                <!-- Política de privacidad -->
+                <div class="grupo-checkbox">
+                    <input type="checkbox" id="campo-politica" name="politica">
+                    <label for="campo-politica">
+                        He leído y acepto la política de privacidad *
+                    </label>
+                    <span class="error-campo" id="error-politica"></span>
+                </div>
+
+                <!-- Mensaje global de éxito o error -->
+                <p class="mensaje-global" id="mensaje-global"></p>
+
+                <!-- Botones -->
+                <div class="botones-formulario">
+                    <button type="submit" class="boton" id="boton-enviar">Enviar mensaje</button>
+                    <button type="reset" class="boton boton-secundario" id="boton-limpiar">Limpiar formulario</button>
+                </div>
+
+                <p class="nota-obligatorios">* Campos obligatorios</p>
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- ========== PIE DE PÁGINA ========== -->
+    <footer class="pie-pagina">
+        <div class="contenedor-pie">
+            <ul class="redes-sociales">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">YouTube</a></li>
+            </ul>
+            <p class="derechos-reservados">
+                &copy; 2025 La Liga del Aficionado — Todos los derechos reservados.<br>
+                Página desarrollada por <strong>Cristian de Paz</strong>.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Script específico del formulario de contacto -->
+    <script src="js/contacto.js"></script>
+</body>
+</html>

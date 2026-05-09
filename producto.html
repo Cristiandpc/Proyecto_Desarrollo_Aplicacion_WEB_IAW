@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camiseta Real Madrid 2024/2025 | La Liga del Aficionado</title>
+    <meta name="description" content="Camiseta oficial del Real Madrid temporada 2024/2025. Disponible en todas las tallas.">
+    <meta name="author" content="Cristian de Paz">
+    <meta name="keywords" content="ASIR, fútbol, camisetas, La Liga, Real Madrid, equipación 2024/2025, tienda online, talla, dorsal, primera equipación, comprar camiseta, HTML, CSS, JavaScript">
+
+    <!-- Hojas de estilo: la común y la específica del producto -->
+    <link rel="stylesheet" href="css/comunes.css">
+    <link rel="stylesheet" href="css/producto.css">
+</head>
+<body>
+
+    <!-- ========== CABECERA Y NAVEGACIÓN ========== -->
+    <header class="cabecera-principal">
+        <div class="contenedor-cabecera">
+            <a href="index.html">
+                <img src="assets/logo.svg" alt="Logo de La Liga del Aficionado" class="logo-tienda">
+            </a>
+            <nav>
+                <ul class="menu-navegacion">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="producto.html" class="activo">Producto</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== CONTENIDO PRINCIPAL ========== -->
+    <main class="contenido-principal">
+
+        <!-- Migas de pan (breadcrumb) -->
+        <nav class="migas-pan">
+            <a href="index.html">Inicio</a>
+            <span class="separador-migas">/</span>
+            <a href="index.html">Camisetas La Liga</a>
+            <span class="separador-migas">/</span>
+            <span>Real Madrid</span>
+        </nav>
+
+        <!-- Detalle del producto -->
+        <section class="detalle-producto">
+
+            <!-- Galería de imágenes -->
+            <div class="galeria-producto">
+                <div class="imagen-principal-wrapper">
+                    <img src="assets/camiseta-real-madrid.webp"
+                         alt="Camiseta del Real Madrid 2024/2025"
+                         id="imagen-principal-producto"
+                         class="imagen-principal-producto">
+                </div>
+
+                <!-- Miniaturas de otros equipos como sugerencia -->
+                <div class="miniaturas-galeria">
+                    <img src="assets/camiseta-real-madrid.webp"
+                         alt="Vista frontal"
+                         class="miniatura-galeria activa"
+                         data-imagen="assets/camiseta-real-madrid.webp">
+                    <img src="assets/camiseta-barcelona.webp"
+                         alt="Camiseta del Barcelona"
+                         class="miniatura-galeria"
+                         data-imagen="assets/camiseta-barcelona.webp">
+                    <img src="assets/camiseta-atletico.jpg"
+                         alt="Camiseta del Atlético"
+                         class="miniatura-galeria"
+                         data-imagen="assets/camiseta-atletico.jpg">
+                    <img src="assets/camiseta-sevilla.png"
+                         alt="Camiseta del Sevilla"
+                         class="miniatura-galeria"
+                         data-imagen="assets/camiseta-sevilla.png">
+                    <img src="assets/camiseta-betis.webp"
+                         alt="Camiseta del Real Betis"
+                         class="miniatura-galeria"
+                         data-imagen="assets/camiseta-betis.webp">
+                    <img src="assets/camiseta-villarreal.webp"
+                         alt="Camiseta del Villarreal"
+                         class="miniatura-galeria"
+                         data-imagen="assets/camiseta-villarreal.webp">
+                </div>
+            </div>
+
+            <!-- Información del producto -->
+            <div class="informacion-producto">
+                <p class="categoria-producto">Camiseta oficial · La Liga 2024/2025</p>
+                <h1 class="nombre-producto">Camiseta Real Madrid 1ª Equipación</h1>
+
+                <div class="valoracion-producto">
+                    <span class="estrellas">★★★★★</span>
+                    <span class="numero-resenas">(245 reseñas)</span>
+                </div>
+
+                <p class="precio-producto">
+                    <span class="precio-actual">89,99 €</span>
+                    <span class="precio-anterior">109,99 €</span>
+                    <span class="etiqueta-rebaja">-18 %</span>
+                </p>
+
+                <p class="descripcion-producto">
+                    La nueva camiseta oficial del Real Madrid para la temporada 2024/2025.
+                    Confeccionada con tecnología <strong>Dri-FIT</strong> para máxima
+                    transpirabilidad, con el escudo bordado y los colores corporativos
+                    del club. Una pieza imprescindible para cualquier aficionado madridista.
+                </p>
+
+                <!-- Selector de talla -->
+                <div class="selector-tallas">
+                    <p class="etiqueta-selector">Selecciona tu talla:</p>
+                    <div class="lista-tallas" id="lista-tallas">
+                        <button class="boton-talla" data-talla="S">S</button>
+                        <button class="boton-talla" data-talla="M">M</button>
+                        <button class="boton-talla" data-talla="L">L</button>
+                        <button class="boton-talla" data-talla="XL">XL</button>
+                        <button class="boton-talla" data-talla="XXL">XXL</button>
+                    </div>
+                </div>
+
+                <!-- Selector de cantidad -->
+                <div class="selector-cantidad">
+                    <p class="etiqueta-selector">Cantidad:</p>
+                    <div class="control-cantidad">
+                        <button class="boton-cantidad" id="boton-restar" type="button">−</button>
+                        <input type="text" id="entrada-cantidad" value="1" readonly>
+                        <button class="boton-cantidad" id="boton-sumar" type="button">+</button>
+                    </div>
+                </div>
+
+                <!-- Aviso para mostrar mensajes al usuario -->
+                <p class="mensaje-aviso" id="mensaje-aviso"></p>
+
+                <!-- Botones de acción -->
+                <div class="botones-accion">
+                    <button class="boton" id="boton-agregar-carrito">Agregar al carrito</button>
+                    <a href="contacto.html" class="boton boton-secundario">Consultar disponibilidad</a>
+                </div>
+
+                <!-- Información extra -->
+                <ul class="lista-caracteristicas">
+                    <li>Envío gratuito en pedidos superiores a 50 €</li>
+                    <li>Devolución gratuita en 30 días</li>
+                    <li>Producto 100 % oficial con etiqueta del fabricante</li>
+                    <li>Personalización con nombre y dorsal disponible</li>
+                </ul>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ========== PIE DE PÁGINA ========== -->
+    <footer class="pie-pagina">
+        <div class="contenedor-pie">
+            <ul class="redes-sociales">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">YouTube</a></li>
+            </ul>
+            <p class="derechos-reservados">
+                &copy; 2025 La Liga del Aficionado — Todos los derechos reservados.<br>
+                Página desarrollada por <strong>Cristian de Paz</strong>.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Script específico de la página de producto -->
+    <script src="js/producto.js"></script>
+</body>
+</html>

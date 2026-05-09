@@ -1,0 +1,229 @@
+/* =========================================================
+   ESTILOS DE LA PORTADA (index.html)
+   Hero, rejilla de equipos, ventajas y contadores
+   ========================================================= */
+
+/* --- Sección Hero --- */
+.seccion-hero {
+    position: relative;
+    min-height: 450px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    background-image:
+        linear-gradient(rgba(14, 30, 64, 0.7), rgba(14, 30, 64, 0.7)),
+        url('../assets/banner-portada.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+    box-shadow: var(--sombra-fuerte);
+}
+
+.contenido-hero {
+    max-width: 800px;
+}
+
+.saludo-dinamico {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--color-acento);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.titulo-hero {
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    line-height: 1.2;
+}
+
+.texto-hero {
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* --- Sección de equipos --- */
+.seccion-equipos {
+    margin-bottom: 4rem;
+}
+
+.titulo-seccion {
+    font-size: 2.2rem;
+    color: var(--color-principal);
+    text-align: center;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.titulo-seccion::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--color-acento);
+    border-radius: 2px;
+}
+
+.subtitulo-seccion {
+    text-align: center;
+    color: var(--color-gris);
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+.rejilla-equipos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.tarjeta-equipo {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    box-shadow: var(--sombra-suave);
+    border: 2px solid transparent;
+    transition: var(--transicion);
+    cursor: pointer;
+}
+
+.tarjeta-equipo:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-fuerte);
+    border-color: var(--color-acento);
+}
+
+.imagen-camiseta {
+    width: 100%;
+    max-width: 220px;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-color: var(--color-claro);
+    border-radius: 8px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tarjeta-equipo h3 {
+    color: var(--color-principal);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.precio-tarjeta {
+    color: var(--color-acento);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+/* --- Sección de ventajas --- */
+.seccion-ventajas {
+    margin-bottom: 4rem;
+    padding: 3rem 0;
+}
+
+.rejilla-ventajas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.tarjeta-ventaja {
+    background-color: white;
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicion);
+}
+
+.tarjeta-ventaja:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-fuerte);
+}
+
+.icono-ventaja {
+    background-color: var(--color-principal);
+    color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.tarjeta-ventaja h3 {
+    color: var(--color-principal);
+    margin-bottom: 0.5rem;
+    font-size: 1.15rem;
+}
+
+.tarjeta-ventaja p {
+    color: var(--color-gris);
+    font-size: 0.95rem;
+}
+
+/* --- Sección de contadores --- */
+.seccion-contadores {
+    background-color: var(--color-principal);
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    text-align: center;
+    color: white;
+    box-shadow: var(--sombra-fuerte);
+}
+
+.numero-contador {
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color-acento);
+    margin-bottom: 0.5rem;
+}
+
+.contador p {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.95rem;
+}
+
+/* --- Adaptación móvil --- */
+@media (max-width: 700px) {
+    .titulo-hero {
+        font-size: 1.8rem;
+    }
+
+    .texto-hero {
+        font-size: 1rem;
+    }
+
+    .titulo-seccion {
+        font-size: 1.6rem;
+    }
+
+    .numero-contador {
+        font-size: 2.2rem;
+    }
+}

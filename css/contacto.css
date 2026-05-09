@@ -1,0 +1,227 @@
+/* =========================================================
+   ESTILOS DE LA PÁGINA DE CONTACTO (contacto.html)
+   ========================================================= */
+
+/* --- Contenedor general en dos columnas --- */
+.seccion-contacto {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 3rem;
+    margin-top: 1rem;
+}
+
+/* --- Información de contacto (columna izquierda) --- */
+.informacion-contacto {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: var(--sombra-suave);
+}
+
+.titulo-contacto {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.titulo-contacto::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-acento);
+    margin-top: 0.6rem;
+    border-radius: 2px;
+}
+
+.texto-contacto {
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    color: #DDD;
+}
+
+.lista-datos-contacto {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.lista-datos-contacto li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--color-acento);
+}
+
+.etiqueta-dato {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    color: var(--color-acento);
+    letter-spacing: 1px;
+}
+
+/* --- Formulario (columna derecha) --- */
+.formulario-contacto {
+    background-color: white;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: var(--sombra-suave);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.titulo-formulario {
+    font-size: 1.8rem;
+    color: var(--color-principal);
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid var(--color-borde);
+}
+
+/* --- Grupo de campos: etiqueta + input + error --- */
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.grupo-campo label {
+    font-weight: bold;
+    color: var(--color-principal);
+    font-size: 0.95rem;
+}
+
+.grupo-campo input,
+.grupo-campo select,
+.grupo-campo textarea {
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--color-borde);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: white;
+    color: var(--color-oscuro);
+    transition: var(--transicion);
+}
+
+.grupo-campo input:focus,
+.grupo-campo select:focus,
+.grupo-campo textarea:focus {
+    outline: none;
+    border-color: var(--color-principal);
+    box-shadow: 0 0 0 3px rgba(14, 30, 64, 0.1);
+}
+
+.grupo-campo textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* --- Estado de error en los campos --- */
+.grupo-campo input.invalido,
+.grupo-campo select.invalido,
+.grupo-campo textarea.invalido {
+    border-color: var(--color-acento);
+    background-color: #FFF6F7;
+}
+
+.error-campo {
+    color: var(--color-acento);
+    font-size: 0.85rem;
+    font-weight: bold;
+    min-height: 1rem;
+}
+
+/* --- Casilla de aceptación --- */
+.grupo-checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 0;
+}
+
+.grupo-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--color-acento);
+}
+
+.grupo-checkbox label {
+    cursor: pointer;
+    color: var(--color-oscuro);
+    font-size: 0.95rem;
+}
+
+.grupo-checkbox .error-campo {
+    width: 100%;
+}
+
+/* --- Mensaje global (resultado del envío) --- */
+.mensaje-global {
+    min-height: 1.4rem;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: var(--transicion);
+}
+
+.mensaje-global.error-global {
+    background-color: #FFEBEC;
+    color: var(--color-acento);
+    border: 1px solid var(--color-acento);
+}
+
+.mensaje-global.exito-global {
+    background-color: #E8F5E9;
+    color: var(--color-secundario);
+    border: 1px solid var(--color-secundario);
+}
+
+/* --- Botones del formulario --- */
+.botones-formulario {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.botones-formulario .boton {
+    flex: 1;
+    min-width: 150px;
+}
+
+.nota-obligatorios {
+    font-size: 0.85rem;
+    color: var(--color-gris);
+    text-align: right;
+    margin-top: 0.5rem;
+}
+
+/* --- Adaptación móvil --- */
+@media (max-width: 850px) {
+    .seccion-contacto {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .informacion-contacto,
+    .formulario-contacto {
+        padding: 1.8rem 1.5rem;
+    }
+
+    .titulo-contacto {
+        font-size: 1.8rem;
+    }
+
+    .titulo-formulario {
+        font-size: 1.4rem;
+    }
+}
